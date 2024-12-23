@@ -1,8 +1,7 @@
 <!DOCTYPE HTML>
 <!--
-    Hyperspace by HTML5 UP
-    html5up.net | @ajlkn
-    Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+author: Rehoboth Elias Bogale personal protofolio website
+I am currently creative developer at Toota
 -->
 <html>
     <head>
@@ -11,6 +10,33 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="assets/css/main.css" />
         <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <style>
+            .profile-image {
+                width: 300px;
+                height: 300px;
+                border-radius: 50%;
+                margin-right: 20px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                transition: transform 0.3s;
+            }
+            .profile-image:hover {
+                transform: scale(1.05);
+            }
+            .intro-text {
+                font-size: 1.2em;
+                color: #333;
+            }
+            .wrapper.style3 {
+                background-color: rgba(102, 68, 255, 0.267); /* Slightly lighter color for the certificate section */
+            }
+            .intro-container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                text-align: left;
+            }
+        </style>
     </head>
     <body class="is-preload">
 
@@ -33,39 +59,44 @@
                 <!-- Intro -->
                 <section id="intro" class="wrapper style1 fullscreen fade-up">
                     <div class="inner">
-                        <h1>Rihobot Elias Bogale</h1>
-                        <p>Aspring Software Engineer</p>
-                        <p>Visionary</p>
-                        <p>Programmer</p>
-                        <p>Creative</p>
-                        <ul class="actions">
-                            <li><a href="https://drive.google.com/file/d/1tiw9Yu3zxCEPY-UPcVp-KgDjQX9rY48K/view?usp=sharing" target="_blank" class="button scrolly">View CV</a></li>
-                        </ul>
+                        <div class="intro-container">
+                            <img src="./images/photo_2024-12-23_07-54-07.jpg" alt="Rihobot Elias Bogale" class="profile-image">
+                            <div>
+                                <h1>Rihobot Elias Bogale</h1>
+                                <p class="intro-text"> Software Engineer</p>
+                                <p class="intro-text">Visionary</p>
+                                <p class="intro-text">Programmer</p>
+                                <p class="intro-text">Creative</p>
+                                <ul class="actions">
+                                    <li><a href="https://drive.google.com/file/d/1tiw9Yu3zxCEPY-UPcVp-KgDjQX9rY48K/view?usp=sharing" target="_blank" class="button scrolly">View CV</a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
                 <!-- Projects -->
                 <section id="projects" class="wrapper style2 spotlights">
                     <section>
-                        <a href="#" class="image"><img src="images/project1.jpg" alt="" data-position="center center" /></a>
+                        <a href="#" class="image"><img src="./images/Toota.png" alt="" data-position="center center" /></a>
                         <div class="content">
                             <div class="inner">
-                                <h2>Project One</h2>
-                                <p>Description of project one.</p>
+                                <h2>Toota</h2>
+                                <p>Toota is an African connecting project aimed at providing seamless transportation solutions across the continent. THis system is integrated with third party for e-commerce payment online . a user can provide information like destination can take seemless manner.We as Team currently from different parts of africa working on it both web and mobile application.</p>
                                 <ul class="actions">
-                                    <li><a href="https://github.com/yourusername/project1" class="button">View Project</a></li>
+                                    <li><a href="#" class="button" target="_blank">View Project</a></li>
                                 </ul>
                             </div>
                         </div>
                     </section>
                     <section>
-                        <a href="#" class="image"><img src="images/project2.jpg" alt="" data-position="center center" /></a>
+                        <a href="#" class="image"><img src="./images/interactive_task.png" alt="" data-position="center center" /></a>
                         <div class="content">
                             <div class="inner">
-                                <h2>Project Two</h2>
+                                <h2>Interactive TaskBoard</h2>
                                 <p>Description of project two.</p>
                                 <ul class="actions">
-                                    <li><a href="https://github.com/yourusername/project2" class="button">View Project</a></li>
+                                    <li><a href="https://interactive-taskboard.vercel.app/ " target="_blank" class="button">View Project</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -76,7 +107,12 @@
                 <section id="three" class="wrapper style3 fade-up">
                     <div class="inner">
                         <h2>Certificates</h2>
-                        <p>Details about your certificates.</p>
+                        <p>Top 5% Scorer of Ethiopian Entrance Qualification Certificate
+                        </p>
+                        <p>Artificial Career Essentials Certificate offered by ALX</p>
+                        <p>Hewlett Packard Enterprise’s software engineering Simulation on Forage</p>
+                        <p>Udacity Building Native APP using Flutter</p>
+                    
                     </div>
                 </section>
 
@@ -86,37 +122,40 @@
                         <h2>Contact Me</h2>
                         <p>Details on how to contact you.</p>
                         <ul class="actions">
-                            <li><a href="https://www.linkedin.com/in/yourusername" class="button">LinkedIn</a></li>
-                            <li><a href="https://github.com/yourusername" class="button">GitHub</a></li>
+                            <li><a href="https://www.linkedin.com/in/rihobot-elias-1a7b44324/" target="_blank" class="button">LinkedIn</a></li>
+                            <li><a href="https://github.com/Robinadev" target="_blank" class="button">GitHub</a></li>
                         </ul>
                     </div>
                 </section>
 
+                <!-- Message Form -->
+                <section id="message" class="wrapper style4 fade-up">
+                    <div class="inner">
+                        <h2>Send a Message</h2>
+                        <form action="https://api.web3forms.com/submit" method="POST">
+                            <input type="hidden" name="access_key" value="15dc94f9-2cbc-4464-b0cf-f38051fbfef0">
+                            <div class="fields">
+                                <div class="field half">
+                                    <label for="name">Name</label>
+                                    <input type="text" name="name" id="name" />
+                                </div>
+                                <div class="field half">
+                                    <label for="email">Email</label>
+                                    <input type="email" name="email" id="email" />
+                                </div>
+                                <div class="field">
+                                    <label for="message">Message</label>
+                                    <textarea name="message" id="message" rows="6"></textarea>
+                                </div>
+                            </div>
+                            <ul class="actions">
+                                <li><input type="submit" value="Send Message" class="primary" /></li>
+                            </ul>
+                        </form>
+                    </div>
+                </section>
+
             </div>
-			<section id="message" class="wrapper style4 fade-up">
-				<div class="inner">
-					<h2>Send a Message</h2>
-					<form method="post" action="#">
-						<div class="fields">
-							<div class="field half">
-								<label for="name">Name</label>
-								<input type="text" name="name" id="name" />
-							</div>
-							<div class="field half">
-								<label for="email">Email</label>
-								<input type="email" name="email" id="email" />
-							</div>
-							<div class="field">
-								<label for="message">Message</label>
-								<textarea name="message" id="message" rows="6"></textarea>
-							</div>
-						</div>
-						<ul class="actions">
-							<li><input type="submit" value="Send Message" class="primary" /></li>
-						</ul>
-					</form>
-				</div>
-			</section>
 
         <!-- Footer -->
             <footer id="footer" class="wrapper style1-alt">
