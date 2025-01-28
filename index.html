@@ -1,192 +1,217 @@
 <!DOCTYPE HTML>
-<!--
-author: Rehoboth Elias Bogale personal protofolio website
-I am currently creative developer at Toota
--->
 <html>
-    <head>
-        <title>Rihobot's website</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-        <link rel="stylesheet" href="assets/css/main.css" />
-        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-        <style>
-            .profile-image {
-                width: 300px;
-                height: 300px;
-                border-radius: 50%;
-                margin-right: 20px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-                transition: transform 0.3s;
-            }
-            .profile-image:hover {
-                transform: scale(1.05);
-            }
-            .intro-text {
-                font-size: 1.2em;
-                color: #333;
-            }
-            .wrapper.style3 {
-                background-color: rgba(102, 68, 255, 0.267); /* Slightly lighter color for the certificate section */
-            }
-            .intro-container {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                flex-wrap: wrap;
-                text-align: left;
-            }
-            .button.cv {
-                background-color: #6f27c2;
-                color: white;
-                border: none;
-                padding: 4px 10px;
-                font-size: 1.2em;
-                border-radius: 5px;
-                transition: background-color 0.3s, transform 0.3s;
-            }
-            .button.cv:hover {
-                background-color: #5018d1;
-                transform: scale(1.1);
-            }
-        </style>
-    </head>
-    <body class="is-preload">
+  <head>
+    <title>Rihobot Elias - Portfolio</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        margin: 0;
+        background: #1e1e2f;
+        color: #ffffff;
+      }
 
-        <!-- Sidebar -->
-            <section id="sidebar">
-                <div class="inner">
-                    <nav>
-                        <ul>
-                            <li><a href="#intro">Welcome</a></li>
-                            <li><a href="#projects">Projects</a></li>
-                            <li><a href="#three">Certificates</a></li>
-                            <li><a href="#contact">Contact Me</a></li>
-                        </ul>
-                    </nav>
-                </div>
-            </section>
+      .intro {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        text-align: center;
+        background: linear-gradient(135deg, #6f27c2, #8e44ad);
+      }
 
-        <!-- Wrapper -->
-            <div id="wrapper">
-                <!-- Intro -->
-                <section id="intro" class="wrapper style1 fullscreen fade-up">
-                    <div class="inner">
-                        <div class="intro-container">
-                            <img src="./images/photo_2024-12-23_07-54-07.jpg" alt="Rihobot Elias Bogale" class="profile-image">
-                            <div>
-                                <h1>Rihobot Elias Bogale</h1>
-                                <p class="intro-text"> Software Engineer</p>
-                                <p class="intro-text">Visionary</p>
-                                <p class="intro-text">Programmer</p>
-                                <p class="intro-text">Creative</p>
-                                <ul class="actions">
-                                    <li><a href="https://drive.google.com/file/d/1lFEI83bGyAnb_BrmvOvc4HX9Cx8HStX6/view?usp=drive_link" target="_blank" class="button cv">View CV</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+      .intro h1 {
+        font-size: 3rem;
+        margin: 0;
+        animation: fadeInUp 1s ease-in-out both;
+      }
 
-                <!-- Projects -->
-                <section id="projects" class="wrapper style2 spotlights">
-                    <section>
-                        <a href="#" class="image"><img src="./images/Toota.png" alt="" data-position="center center" /></a>
-                        <div class="content">
-                            <div class="inner">
-                                <h2>Toota</h2>
-                                <p>Toota is an African connecting project aimed at providing seamless transportation solutions across the continent. THis system is integrated with third party for e-commerce payment online . a user can provide information like destination can take seemless manner.We as Team currently from different parts of africa working on it both web and mobile application.</p>
-                                <ul class="actions">
-                                    <li><a href="#" class="button" target="_blank">View Project</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-                    <section>
-                        <a href="#" class="image"><img src="./images/interactive_task.png" alt="" data-position="center center" /></a>
-                        <div class="content">
-                            <div class="inner">
-                                <h2>Interactive TaskBoard</h2>
-                                <p>Easily Accessible Schedule fully Set Reminder WIth Functionality of Voice Input hands Free Task Management</p>
-                                <ul class="actions">
-                                    <li><a href="https://interactive-taskboard.vercel.app/ " target="_blank" class="button">View Project</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-                </section>
+      .intro p {
+        font-size: 1.25rem;
+        margin: 0.5em 0;
+        animation: fadeInUp 1.2s ease-in-out both;
+      }
 
-                <!-- Certificates -->
-                <section id="three" class="wrapper style3 fade-up">
-                    <div class="inner">
-                        <h2>Certificates</h2>
-                        <p>Top 5% Scorer of Ethiopian Entrance Qualification Certificate
-                        </p>
-                        <p>Artificial Career Essentials Certificate offered by ALX</p>
-                        <p>Hewlett Packard Enterprise’s software engineering Simulation on Forage</p>
-                        <p>Udacity Building Native APP using Flutter</p>
-                    
-                    </div>
-                </section>
+      .intro .buttons {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        margin-top: 1em;
+      }
 
-                <!-- Contact Me -->
-                <section id="contact" class="wrapper style4 fade-up">
-                    <div class="inner">
-                        <h2>Contact Me</h2>
-                        <p>Details on how to contact you.</p>
-                        <ul class="actions">
-                            <li><a href="https://www.linkedin.com/in/rihobot-elias-1a7b44324/" target="_blank" class="button">LinkedIn</a></li>
-                            <li><a href="https://github.com/Robinadev" target="_blank" class="button">GitHub</a></li>
-                        </ul>
-                    </div>
-                </section>
+      .intro .button {
+        background: linear-gradient(90deg, #6f27c2, #8e44ad);
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+      }
 
-                <!-- Message Form -->
-                <section id="message" class="wrapper style4 fade-up">
-                    <div class="inner">
-                        <h2>Send a Message</h2>
-                        <form action="https://api.web3forms.com/submit" method="POST">
-                            <input type="hidden" name="access_key" value="15dc94f9-2cbc-4464-b0cf-f38051fbfef0">
-                            <div class="fields">
-                                <div class="field half">
-                                    <label for="name">Name</label>
-                                    <input type="text" name="name" id="name" />
-                                </div>
-                                <div class="field half">
-                                    <label for="email">Email</label>
-                                    <input type="email" name="email" id="email" />
-                                </div>
-                                <div class="field">
-                                    <label for="message">Message</label>
-                                    <textarea name="message" id="message" rows="6"></textarea>
-                                </div>
-                            </div>
-                            <ul class="actions">
-                                <li><input type="submit" value="Send Message" class="primary" /></li>
-                            </ul>
-                        </form>
-                    </div>
-                </section>
+      .intro .button:hover {
+        background: #5018d1;
+        transform: scale(1.1);
+      }
 
-            </div>
+      .projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 40px;
+        background: #292942;
+      }
 
-        <!-- Footer -->
-            <footer id="footer" class="wrapper style1-alt">
-                <div class="inner">
-                    <ul class="menu">
-                        <li>&copy; All rights reserved.</li><li>Design: Rihobot Elias</li>
-                    </ul>
-                </div>
-            </footer>
+      .project-card {
+        background: #1e1e2f;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
 
-        <!-- Scripts -->
-            <script src="assets/js/jquery.min.js"></script>
-            <script src="assets/js/jquery.scrollex.min.js"></script>
-            <script src="assets/js/jquery.scrolly.min.js"></script>
-            <script src="assets/js/browser.min.js"></script>
-            <script src="assets/js/breakpoints.min.js"></script>
-            <script src="assets/js/util.js"></script>
-            <script src="assets/js/main.js"></script>
+      .project-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      }
 
-    </body>
+      .project-card img {
+        width: 100%;
+        height: auto;
+      }
+
+      .project-card .content {
+        padding: 20px;
+      }
+
+      .project-card h2 {
+        font-size: 1.5rem;
+        margin: 0 0 10px;
+      }
+
+      .project-card p {
+        font-size: 1rem;
+        color: #bbb;
+      }
+
+      .contact {
+        background: linear-gradient(135deg, #292942, #1e1e2f);
+        padding: 40px;
+        text-align: center;
+      }
+
+      .contact h2 {
+        margin-bottom: 20px;
+        font-size: 2rem;
+      }
+
+      .contact a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        border: 2px solid #6f27c2;
+        border-radius: 5px;
+        transition: all 0.3s;
+      }
+
+      .contact a:hover {
+        background: #6f27c2;
+        color: #fff;
+      }
+
+      .resume {
+        background: #292942;
+        padding: 40px;
+        text-align: center;
+      }
+
+      .resume h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      .resume a {
+        display: inline-block;
+        color: #fff;
+        text-decoration: none;
+        padding: 15px 30px;
+        background: linear-gradient(90deg, #6f27c2, #8e44ad);
+        font-size: 1.2rem;
+        border-radius: 5px;
+        transition: background-color 0.3s, transform 0.3s;
+      }
+
+      .resume a:hover {
+        background: #5018d1;
+        transform: scale(1.1);
+      }
+
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Intro Section -->
+    <div class="intro">
+      <div>
+        <h1>Rihobot Elias Bogale</h1>
+        <p>Software Engineer | Visionary | Creative Developer</p>
+        <div class="buttons">
+          <a href="#resume" class="button">View Resume</a>
+          <a href="#projects" class="button">View My Work</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <div class="project-card">
+        <img src="./images/Landing Page.png" alt="Finance Management Project">
+        <div class="content">
+          <h2>Finance Management with Authentication</h2>
+          <p>Developed a finance management system featuring secure user authentication and a protected dashboard 
+            for financial management. The project leveraged modern web technologies, including ReactJS, Chakra UI, 
+            Tailwind CSS, TypeScript, and Vite, integrated with a backend API to deliver a clean and responsive user 
+            interface.</p>
+          <a href="https://github.com/Robinadev/Finance-Management_with_Authentication" class="button">View Project</a>
+        </div>
+      </div>
+      <div class="project-card">
+        <img src="./images/deep.jpeg" alt="Fruit Recognition Model">
+        <div class="content">
+          <h2>Fruit Recognition Model using Deep Learning</h2>
+          <p>Developed a fruit recognition system leveraging deep learning techniques. The project involved dataset 
+            preparation, model building, and evaluation using TensorFlow and Keras. Key responsibilities included data 
+            augmentation, CNN model architecture design, and performance optimization, achieving effective image 
+            classification for multiple fruit types.</p>
+          <a href="https://github.com/Robinadev/Fruit-Recognition-Model-Using-Deep_learning_algorithm" target="_blank" class="button">View Project</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume">
+      <h2>View My Resume</h2>
+      <a href="https://drive.google.com/file/d/1lFEI83bGyAnb_BrmvOvc4HX9Cx8HStX6/view?usp=drive_link" target="_blank">Download Resume</a>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <h2>Contact Me</h2>
+      <a href="https://www.linkedin.com/in/rihobot-elias-1a7b44324/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/Robinadev" target="_blank">GitHub</a>
+    </section>
+  </body>
 </html>
