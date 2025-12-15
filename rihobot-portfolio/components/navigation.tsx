@@ -6,7 +6,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X, Sun, Moon, Download } from "lucide-react"
-import { useTheme } from "next-themes"
+import { useTheme } from "next-themes";
 import { Button } from "../components/ui/button";
 
 const navItems = [
