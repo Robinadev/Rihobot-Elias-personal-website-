@@ -1,6 +1,6 @@
 // next.config.js
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextConfig: import('next').NextConfig = {
   output: 'standalone', // or 'export' for static sites
   images: {
     unoptimized: true, // for static exports
