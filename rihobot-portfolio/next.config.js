@@ -1,15 +1,13 @@
-// next.config.js - MUST HAVE THIS CONFIG
+// next.config.js - CRITICAL UPDATE
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',  // ← Creates static files in 'out' folder
+  output: 'export',
   images: {
-    unoptimized: true,  // ← Required for GitHub Pages
+    unoptimized: true,
   },
-  // Base path for GitHub Pages subdirectory
-  basePath: process.env.NODE_ENV === 'production' ? '/rihobot-portfolio' : '',
-  // Asset prefix for correct loading
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/rihobot-portfolio/' : '',
-  // Important for GitHub Pages routing
+  // IMPORTANT: Match EXACT repository name
+  basePath: '/Rihobot-Elias-personal-website-',
+  assetPrefix: '/Rihobot-Elias-personal-website-/',
   trailingSlash: true,
 }
 
