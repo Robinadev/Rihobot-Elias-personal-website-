@@ -3,9 +3,9 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
+import { Button } from "../components/ui/button";
 import { Mail, MapPin, Phone, Send, CheckCircle, AlertCircle } from "lucide-react"
-import { contactAction } from "@/lib/actions"
+import { contactAction } from "../lib/actions";
 
 export function Contact() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
