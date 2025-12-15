@@ -1,7 +1,9 @@
 /* app/globals.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* stylelint-disable */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+/* stylelint-enable */
 
 @layer base {
   :root {
@@ -52,27 +54,33 @@
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: hsl(var(--border));
   }
   body {
-    @apply bg-background text-foreground;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
 
 @layer utilities {
   .text-gradient {
-    @apply bg-gradient-to-r from-blue-600 to-cyan-400 bg-clip-text text-transparent;
+    background-image: linear-gradient(to right, #2563eb, #06b6d4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
   }
   
   .gradient-border {
-    @apply relative border border-transparent;
+    position: relative;
+    border: 1px solid transparent;
     background: linear-gradient(white, white) padding-box,
                 linear-gradient(to right, #3b82f6, #06b6d4) border-box;
   }
   
   .gradient-border-dark {
-    @apply relative border border-transparent;
+    position: relative;
+    border: 1px solid transparent;
     background: linear-gradient(#020817, #020817) padding-box,
                 linear-gradient(to right, #3b82f6, #06b6d4) border-box;
   }
