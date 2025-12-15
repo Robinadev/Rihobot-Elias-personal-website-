@@ -2,8 +2,8 @@
 import type { Metadata } from 'next'
 import { Inter, JetBrains_Mono } from 'next/font/google'
 import './globals.css'
-import { ThemeProvider } from '@/components/theme-provider'
-import { Navigation } from '@/components/navigation'
+import { ThemeProvider } from '../../components/theme-provider';
+import { Navigation } from '../../components/navigation';
 
 const inter = Inter({
   subsets: ['latin'],
