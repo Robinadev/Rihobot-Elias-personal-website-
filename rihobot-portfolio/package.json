@@ -2,7 +2,7 @@
   "name": "rihobot-portfolio",
   "version": "0.1.0",
   "private": true,
-   "homepage": "https://robinadev.github.io/Rihobot-Elias-personal-website-",
+  "homepage": "https://robinadev.github.io/Rihobot-Elias-personal-website-",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -23,7 +23,8 @@
     "react-dom": "^18",
     "resend": "^6.6.0",
     "tailwind-merge": "^2.2.0",
-    "tailwindcss": "^3.3.0"
+    "tailwindcss": "^3.3.0",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@types/node": "^20",
