@@ -1,33 +1,38 @@
-Hyperspace by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+This is personal Professinoal Website/ portfolio of me with the following features:-
+1. Home/Hero Section
+   - Name & Title
+   - Brief intro with stats (CGPA 3.7, 5+ projects, etc.)
+   - Call-to-action buttons
 
+2. About Section
+   - Professional summary
+   - Education (Wolkite University, expected 2026)
+   - Skills categorization
 
-So I've had the wireframe for this particular design kicking around for some time, but with all
-the other interesting (and in some cases, semi-secret) projects I've been working on it took me
-a little while to get to actually designing and coding it. Fortunately, things have eased up
-enough for me to finaly get around to it, so I'm happy to introduce Hyperspace: a fun, blocky,
-one-page design with a lot of color, a bit of animation, and an additional "generic" page template
-(because hey, even one-page sites usually need an interior page or two). Hope you dig it :)
+3. Experience Timeline
+   - Reverse chronological timeline of roles
+   - Company logos + descriptions
+   - Tech stack tags
+   - Links to projects/demos
 
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
+4. Projects Showcase
+   - Featured projects (FoodWagen, London AI Guide, etc.)
+   - Filter by tech stack
+   - Live demos + GitHub links
+   - 3D visualizations for relevant projects
 
-(* = not included)
+5. Skills Matrix
+   - Categorized skills with proficiency levels
+   - Interactive visualization
 
-AJ
-aj@lkn.io | @ajlkn
+6. Blog Section
+   - Technical articles
+   - AI/ML insights
+   - Project deep-dives
+   - Email subscription feature
 
-
-Credits:
-
-	Demo Images:
-		Unsplash (unsplash.com)
-
-	Icons:
-		Font Awesome (fontawesome.io)
-
-	Other:
-		jQuery (jquery.com)
-		Scrollex (github.com/ajlkn/jquery.scrollex)
-		Responsive Tools (github.com/ajlkn/responsive-tools)
+7. Contact Section
+   - Contact form with Resend integration
+   - Social links
+   - Location (Ethiopia)
+   - Calendar booking link
