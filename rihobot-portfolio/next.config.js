@@ -1,21 +1,13 @@
-// next.config.js
+// next.config.js - CRITICAL CONFIG
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Remove 'output: "export"' if you need SSR features
-  // output: "export",
-  
+  output: 'export', // ← Enables static export
   images: {
-    domains: [],
-    unoptimized: false, // Set to true only if using static export
+    unoptimized: true, // Required for static export
   },
-  
-  // Enable React strict mode
-  reactStrictMode: true,
-  
-  // For webpack configuration if needed
-  webpack: (config) => {
-    return config
-  },
+  basePath: process.env.NODE_ENV === 'production' ? '/rihobot-portfolio' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/rihobot-portfolio/' : '',
+  trailingSlash: true,
 }
 
 module.exports = nextConfig
