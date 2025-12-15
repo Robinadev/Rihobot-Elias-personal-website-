@@ -1,0 +1,2 @@
+# This prevents GitHub from processing with Jekyll
+echo "" > public/.nojekyll
