@@ -1,4 +1,4 @@
-This is personal Porfessinoal Website/ portfolio of me with the following features:-
+This is personal Professinoal Website/ portfolio of me with the following features:-
 1. Home/Hero Section
    - Name & Title
    - Brief intro with stats (CGPA 3.7, 5+ projects, etc.)
