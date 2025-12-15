@@ -1,0 +1,17 @@
+# netlify.toml - Create this in project root
+[build]
+  command = "npm run build"
+  publish = ".next"
+  functions = "netlify/functions"  # For serverless functions if needed
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# For Next.js Image Optimization
+[functions]
+  node_bundler = "esbuild"
