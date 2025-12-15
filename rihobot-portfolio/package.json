@@ -2,7 +2,7 @@
   "name": "rihobot-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Robinadev.github.io/rihobot-portfolio",
+   "homepage": "https://robinadev.github.io/Rihobot-Elias-personal-website-",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
