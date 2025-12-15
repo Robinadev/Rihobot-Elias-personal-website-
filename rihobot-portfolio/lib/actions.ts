@@ -16,7 +16,7 @@ export async function contactAction(formData: FormData) {
       from: "Portfolio Contact <onboarding@resend.dev>",
       to: "rihobotelias123@gmail.com",
       subject: `New Contact: ${subject}`,
-      replyTo: email,
+      reply_to: email,
       text: `
 Name: ${name}
 Email: ${email}
