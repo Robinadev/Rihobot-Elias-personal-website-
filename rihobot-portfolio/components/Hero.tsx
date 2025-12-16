@@ -79,13 +79,13 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="space-y-6">
+            <div className="space-y-3">
               <div>
                 <span className="inline-flex items-center rounded-full border border-gray-300 dark:border-gray-700 px-3 py-1 text-sm font-medium mb-4">
                   <span className="h-2 w-2 rounded-full bg-green-500 mr-2 animate-pulse" />
                   Available for opportunities
                 </span>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight dark:text-white text-gray-900">
+                <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight dark:text-white text-gray-900">
                   Hi, I&apos;m{" "}
                   <span className="bg-gradient-to-r from-blue-600 to-cyan-400 bg-clip-text text-transparent">
                     Rihobot Elias
