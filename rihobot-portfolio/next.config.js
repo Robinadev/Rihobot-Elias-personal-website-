@@ -1,27 +1,9 @@
-// next.config.js - COMPLETE FIX
-/** next.config.js - CRITICAL FIX FOR GITHUB PAGES DEPLOYMENT **/
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  // No 'output: export' for Vercel!
   images: {
-    unoptimized: true,
+    domains: ['images.unsplash.com', 'github.com'],
   },
-  // MUST match your repository EXACTLY
-  basePath: '/Rihobot-Elias-personal-website-',
-  assetPrefix: '/Rihobot-Elias-personal-website-/',
-  trailingSlash: true,
 }
 
-module.exports = nextConfig
-module.exports = {
-  // ... other config
-  async rewrites() {
-    return [
-      {
-        source: '/:path*',
-        destination: '/index.html',
-      },
-    ]
-  }
-}
 module.exports = nextConfig
