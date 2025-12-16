@@ -1,13 +1,26 @@
 // components/hero.tsx
 "use client"
+// In Navigation.tsx or Hero.tsx
+import CvDownloadButton from '@/components/CVdownloadbutton';
 
+// In your component return:
+<CvDownloadButton />
 import { motion } from "framer-motion"
 import { Button } from "../components/ui/button";
 import { ArrowRight, Github, Linkedin, Mail } from "lucide-react"
 import Link from "next/link"
+// In your Hero or Footer component, use these links:
+const socialLinks = {
+  github: 'https://github.com/Robinadev',
+  linkedin: 'https://linkedin.com/in/rihobot-elias-1a7b44324', // Corrected from CV
+  email: 'mailto:rihobotelias123@gmail.com',
+  cv: 'https://drive.google.com/file/d/1KjIf6ureV-v-aKxlBUfiUVgL7bz96bDY/view?usp=drive_link'
+}
 
+// Update your existing social link buttons to use these URLs
 export function Hero() {
   return (
+
     <section className="min-h-[90vh] flex items-center justify-center">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -128,6 +141,7 @@ export function Hero() {
           </motion.div>
         </div>
       </div>
+      
     </section>
   )
 }
