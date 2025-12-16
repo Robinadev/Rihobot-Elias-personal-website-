@@ -25,7 +25,21 @@
   .btn-secondary {
     @apply px-6 py-3 bg-gray-800 hover:bg-gray-700 rounded-lg font-medium transition-all duration-300;
   }
-  
+  * Add these for theme switching */
+.light {
+  --background: 0 0% 100%;
+  --foreground: 0 0% 3.9%;
+}
+
+.dark {
+  --background: 0 0% 3.9%;
+  --foreground: 0 0% 98%;
+}
+@layer components {
+  .text-gradient {
+    @apply bg-gradient-to-r from-blue-600 to-cyan-400 bg-clip-text text-transparent;
+  }
+}
   .section-container {
     width: 100%;
     margin-left: auto;
