@@ -177,9 +177,6 @@ export function Hero() {
                     <div className="text-sm text-gray-600 dark:text-gray-300">Years Experience</div>
                   </div>
                   <div className="space-y-2">
-                    <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-cyan-400 bg-clip-text text-transparent">
-                      3.7
-                    </div>
                     <div className="text-sm text-gray-600 dark:text-gray-300">University CGPA</div>
                   </div>
                   <div className="space-y-2">
