@@ -1,4 +1,9 @@
+
 /* app/globals.css */
+/* app/globals.css - MUST HAVE THIS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 /* stylelint-disable */
 @import "tailwindcss/base";
 @import "tailwindcss/components";
