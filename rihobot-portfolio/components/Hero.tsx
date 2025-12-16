@@ -49,7 +49,7 @@ export function Hero() {
                 <span className="font-semibold text-primary">AI/ML</span> and{" "}
                 <span className="font-semibold text-primary">Full-Stack</span>{" "}
                 technologies. Currently pursuing Software Engineering at Wolkite University 
-                <span className="font-bold text-green-400">3.7</span>.
+                with a passion for innovation and excellence.
               </p>
 
               <div className="flex flex-wrap gap-4 pt-4">
@@ -113,7 +113,6 @@ export function Hero() {
                     <div className="text-sm text-muted-foreground">Years Experience</div>
                   </div>
                   <div className="space-y-2">
-                    <div className="text-3xl font-bold text-gradient">3.7</div>
                     <div className="text-sm text-muted-foreground">University CGPA</div>
                   </div>
                   <div className="space-y-2">
