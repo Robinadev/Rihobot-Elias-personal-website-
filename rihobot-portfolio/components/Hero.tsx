@@ -20,9 +20,6 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45 }}
           >
-            <p className="font-mono text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-              Curriculum vitae <span className="text-muted-foreground">/ 2026</span>
-            </p>
             <h1 id="profile-title" className="mt-5 max-w-3xl text-balance text-4xl font-semibold tracking-tight text-foreground sm:text-6xl lg:text-7xl">
               Rihobot Elias <span className="block text-primary">Bogale</span>
             </h1>
