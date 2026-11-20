@@ -1,159 +1,89 @@
-// components/navigation.tsx
 "use client"
 
-import { useState, useEffect } from "react"
+import { useEffect, useState } from "react"
 import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { motion, AnimatePresence } from "framer-motion"
-import { Menu, X, Sun, Moon, Download } from "lucide-react"
-import { useTheme } from "next-themes";
-import { Button } from "../components/ui/button";
+import { AnimatePresence, motion } from "framer-motion"
+import { Download, Menu, Moon, Sun, X } from "lucide-react"
+import { useTheme } from "next-themes"
 
 const navItems = [
-  { name: "Home", href: "/" },
   { name: "About", href: "/#about" },
   { name: "Experience", href: "/#experience" },
-  { name: "Projects", href: "/#projects" },
+  { name: "Work", href: "/#projects" },
   { name: "Skills", href: "/#skills" },
-  { name: "Blog", href: "/blog" },
+  { name: "Education", href: "/#education" },
   { name: "Contact", href: "/#contact" },
 ]
 
+const cvPath = "/Rihobot_Elias_Bogale_CV.pdf"
+
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
-  const pathname = usePathname()
-  const { theme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+  const { resolvedTheme, setTheme } = useTheme()
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
-
-  const downloadCV = () => {
-    const link = document.createElement('a')
-    link.href = '/Rihobot_Elias_CV.pdf'
-    link.download = 'Rihobot_Elias_CV.pdf'
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
-  }
+  useEffect(() => setMounted(true), [])
 
   return (
-    <header
-      className={`fixed top-0 z-50 w-full transition-all duration-300 ${
-        scrolled
-          ? "bg-background/80 backdrop-blur-md border-b"
-          : "bg-transparent"
-      }`}
-    >
+    <header className="sticky top-0 z-50 border-b border-line/80 bg-background/90 backdrop-blur-xl">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="h-8 w-8 rounded-full bg-gradient-to-r from-blue-600 to-cyan-400" />
-            <span className="font-bold text-xl">
-              <span className="text-gradient">Rihobot</span> Elias
-            </span>
+        <div className="flex h-16 items-center justify-between gap-4">
+          <Link href="/#about" className="group flex min-w-0 items-center gap-3" aria-label="Rihobot Elias Bogale, home">
+            <span className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-primary font-mono text-sm font-bold text-primary-foreground">RB</span>
+            <span className="truncate text-sm font-semibold tracking-tight text-foreground sm:text-base">Rihobot Elias Bogale</span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav aria-label="Main navigation" className="hidden items-center gap-5 lg:flex">
             {navItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  pathname === item.href ? "text-primary" : "text-muted-foreground"
-                }`}
-              >
-                {item.name}
-              </Link>
+              <Link key={item.name} href={item.href} className="text-xs font-medium text-muted-foreground transition-colors hover:text-primary">{item.name}</Link>
             ))}
           </nav>
 
-          {/* Right Side Actions */}
-          <div className="flex items-center space-x-4">
-            {/* Theme Toggle */}
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              aria-label="Toggle theme"
+          <div className="flex shrink-0 items-center gap-2">
+            <button
+              type="button"
+              onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+              aria-label="Toggle color theme"
+              className="grid h-10 w-10 place-items-center rounded-xl text-muted-foreground transition-colors hover:bg-muted hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             >
-              <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-              <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-            </Button>
-
-            {/* Download CV */}
-            <Button
-              onClick={downloadCV}
-              variant="default"
-              size="sm"
-              className="hidden md:flex gap-2"
+              {mounted && resolvedTheme === "dark" ? <Sun aria-hidden="true" className="h-4 w-4" /> : <Moon aria-hidden="true" className="h-4 w-4" />}
+            </button>
+            <a href={cvPath} download className="cv-button cv-button-primary hidden sm:inline-flex">
+              <Download aria-hidden="true" className="h-4 w-4" /> CV
+            </a>
+            <button
+              type="button"
+              className="grid h-10 w-10 place-items-center rounded-xl text-foreground transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary lg:hidden"
+              onClick={() => setIsOpen((open) => !open)}
+              aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+              aria-expanded={isOpen}
+              aria-controls="mobile-navigation"
             >
-              <Download className="h-4 w-4" />
-              CV
-            </Button>
-
-            {/* Mobile Menu Button */}
-            <Button
-              variant="ghost"
-              size="icon"
-              className="md:hidden"
-              onClick={() => setIsOpen(!isOpen)}
-              aria-label="Toggle menu"
-            >
-              {isOpen ? (
-                <X className="h-5 w-5" />
-              ) : (
-                <Menu className="h-5 w-5" />
-              )}
-            </Button>
+              {isOpen ? <X aria-hidden="true" className="h-5 w-5" /> : <Menu aria-hidden="true" className="h-5 w-5" />}
+            </button>
           </div>
         </div>
 
-        {/* Mobile Navigation */}
         <AnimatePresence>
           {isOpen && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              className="md:hidden overflow-hidden"
+            <motion.nav
+              id="mobile-navigation"
+              aria-label="Mobile navigation"
+              initial={{ height: 0, opacity: 0 }}
+              animate={{ height: "auto", opacity: 1 }}
+              exit={{ height: 0, opacity: 0 }}
+              className="overflow-hidden border-t border-line lg:hidden"
             >
-              <div className="py-4 space-y-4 border-t">
+              <div className="grid gap-1 py-3">
                 {navItems.map((item) => (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className={`block px-4 py-2 text-base font-medium transition-colors hover:text-primary hover:bg-accent rounded-md ${
-                      pathname === item.href
-                        ? "text-primary bg-accent"
-                        : "text-muted-foreground"
-                    }`}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
+                  <Link key={item.name} href={item.href} onClick={() => setIsOpen(false)} className="rounded-lg px-3 py-2.5 text-sm font-medium text-muted-foreground hover:bg-muted hover:text-foreground">{item.name}</Link>
                 ))}
-                <Button
-                  onClick={downloadCV}
-                  variant="default"
-                  className="w-full mx-4 gap-2"
-                >
-                  <Download className="h-4 w-4" />
-                  Download CV
-                </Button>
+                <a href={cvPath} download className="cv-button cv-button-primary mt-2 justify-center"><Download aria-hidden="true" className="h-4 w-4" /> Download CV</a>
               </div>
-            </motion.div>
+            </motion.nav>
           )}
         </AnimatePresence>
       </div>
     </header>
   )
-  
 }

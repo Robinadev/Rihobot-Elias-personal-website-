@@ -2,82 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-  }
+:root {
+  --background: 210 33% 98%;
+  --surface: 0 0% 100%;
+  --foreground: 214 34% 17%;
+  --muted-foreground: 213 14% 43%;
+  --primary: 220 74% 47%;
+  --primary-foreground: 0 0% 100%;
+  color-scheme: light;
+}
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+.dark {
+  --background: 216 36% 10%;
+  --surface: 216 30% 15%;
+  --foreground: 210 26% 94%;
+  --muted-foreground: 215 15% 68%;
+  --primary: 216 92% 68%;
+  --primary-foreground: 0 0% 100%;
+  color-scheme: dark;
+}
+
+@layer base {
+  * {
+    @apply border-line;
   }
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
   }
 
   body {
-    @apply bg-white text-gray-900 dark:bg-gray-900 dark:text-white;
+    @apply bg-background text-foreground antialiased;
   }
 }
 
 @layer components {
-  .btn-primary {
-    @apply rounded-lg bg-blue-600 px-6 py-3 font-medium transition-all duration-300 hover:bg-blue-700;
+  .cv-kicker {
+    @apply font-mono text-xs font-semibold uppercase tracking-[0.18em] text-primary;
   }
 
-  .btn-secondary {
-    @apply rounded-lg bg-gray-800 px-6 py-3 font-medium transition-all duration-300 hover:bg-gray-700;
+  .cv-section-title {
+    @apply mt-2 text-2xl font-semibold tracking-tight text-foreground sm:text-3xl;
   }
 
-  .text-gradient {
-    @apply bg-gradient-to-r from-blue-600 to-cyan-400 bg-clip-text text-transparent;
+  .cv-chip {
+    @apply inline-flex items-center rounded-md border border-line bg-background px-2.5 py-1 font-mono text-[11px] leading-4 text-muted-foreground;
   }
 
-  .section-title {
-    @apply mb-4 text-3xl font-bold md:text-4xl;
+  .cv-link {
+    @apply underline decoration-primary underline-offset-4 transition-colors hover:text-primary;
   }
 
-  .section-subtitle {
-    @apply mb-12 text-xl text-gray-300;
+  .cv-button {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background;
   }
-}
 
-.section-container {
-  box-sizing: border-box;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 3rem 1rem;
-}
+  .cv-button-primary {
+    @apply bg-primary text-primary-foreground hover:opacity-90;
+  }
 
-@media (min-width: 640px) {
-  .section-container {
-    max-width: 640px;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+  .cv-button-secondary {
+    @apply border border-line bg-surface text-foreground hover:bg-muted;
   }
 }
 
-@media (min-width: 768px) {
-  .section-container {
-    max-width: 768px;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .section-container {
-    max-width: 1024px;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-}
-
-@media (min-width: 1280px) {
-  .section-container {
-    max-width: 1280px;
-  }
+::selection {
+  background: hsl(var(--primary) / 0.2);
 }
