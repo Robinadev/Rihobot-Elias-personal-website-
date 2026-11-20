@@ -2,122 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --background: 210 33% 98%;
+  --surface: 0 0% 100%;
+  --foreground: 214 34% 17%;
+  --muted-foreground: 213 14% 43%;
+  --primary: 220 74% 47%;
+  --primary-foreground: 0 0% 100%;
+  color-scheme: light;
+}
+
+.dark {
+  --background: 216 36% 10%;
+  --surface: 216 30% 15%;
+  --foreground: 210 26% 94%;
+  --muted-foreground: 215 15% 68%;
+  --primary: 216 92% 68%;
+  --primary-foreground: 0 0% 100%;
+  color-scheme: dark;
+}
+
 @layer base {
-  :root {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+  * {
+    @apply border-line;
   }
 
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
   }
 
   body {
-    @apply bg-gray-900 text-white;
+    @apply bg-background text-foreground antialiased;
   }
 }
 
 @layer components {
-  .btn-primary {
-    @apply px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition-all duration-300;
-  }
-  
-  .btn-secondary {
-    @apply px-6 py-3 bg-gray-800 hover:bg-gray-700 rounded-lg font-medium transition-all duration-300;
-  }
-  * Add these for theme switching */
-.light {
-  --background: 0 0% 100%;
-  --foreground: 0 0% 3.9%;
-}
-
-.dark {
-  --background: 0 0% 3.9%;
-  --foreground: 0 0% 98%;
-}
-@layer components {
-  .text-gradient {
-    @apply bg-gradient-to-r from-blue-600 to-cyan-400 bg-clip-text text-transparent;
-  }
-}
-  .section-container {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    box-sizing: border-box;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+  .cv-kicker {
+    @apply font-mono text-xs font-semibold uppercase tracking-[0.18em] text-primary;
   }
 
-  @media (min-width: 640px) {
-    .section-container {
-      max-width: 640px;
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-    }
+  .cv-section-title {
+    @apply mt-2 text-2xl font-semibold tracking-tight text-foreground sm:text-3xl;
   }
 
-  @media (min-width: 768px) {
-    .section-container {
-      max-width: 768px;
-      padding-top: 5rem;
-      padding-bottom: 5rem;
-    }
+  .cv-chip {
+    @apply inline-flex items-center rounded-md border border-line bg-background px-2.5 py-1 font-mono text-[11px] leading-4 text-muted-foreground;
   }
 
-  @media (min-width: 1024px) {
-    .section-container {
-      max-width: 1024px;
-      padding-left: 2rem;
-      padding-right: 2rem;
-    }
+  .cv-link {
+    @apply underline decoration-primary underline-offset-4 transition-colors hover:text-primary;
   }
 
-  @media (min-width: 1280px) {
-    .section-container {
-      max-width: 1280px;
-    }
-  }
-  
-  .section-title {
-    @apply text-3xl md:text-4xl font-bold mb-4;
-  }
-  
-  .section-subtitle {
-    @apply text-xl text-gray-300 mb-12;
-  }
-  @tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+  .cv-button {
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background;
   }
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+  .cv-button-primary {
+    @apply bg-primary text-primary-foreground hover:opacity-90;
   }
 
-  body {
-    @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-white;
+  .cv-button-secondary {
+    @apply border border-line bg-surface text-foreground hover:bg-muted;
   }
 }
+
+::selection {
+  background: hsl(var(--primary) / 0.2);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
